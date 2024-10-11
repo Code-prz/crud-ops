@@ -1,0 +1,9 @@
+{% extends 'app/base.html' %} 
+{%load static%}
+{% block content%} 
+    <h1>Home!</h1>
+    <img src = "{% static 'images/base.jpg' %}"> 
+
+    <button onclick="showAlert()">Click me</button>
+    <script src = "{% static 'js/base.js'%}"> </script> 
+    {% endblock content%} 

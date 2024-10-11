@@ -1,0 +1,29 @@
+body {
+    animation: colorChange 5S infinite;
+}
+
+img {
+    width: 30%;
+}
+
+h1{
+    color: red;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #ff6666; /* Red */
+    }
+    25% {
+        background-color: #66ff66; /* Green */
+    }
+    50% {
+        background-color: #6666ff; /* Blue */
+    }
+    75% {
+        background-color: #ffff66; /* Yellow */
+    }
+    100% {
+        background-color: #ff66ff; /* Pink */
+    }
+}
