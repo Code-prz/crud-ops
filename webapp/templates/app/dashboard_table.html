@@ -1,0 +1,60 @@
+{% extends 'app/base.html' %} 
+{%load static%}
+{% block content%} 
+
+
+<div class="crud-table">
+    <h1>Dashboard</h1>
+    <button class="create-btn"><i class="fas fa-plus"></i> Create New</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Pet Name</th>
+                <th>Pet Type</th>
+                <th>Status</th>
+                <th>Last Location</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for pet_report in pet_reports %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{pet_report.pet_name}}</td>
+                <td>{{pet_report.pet_type}}</td>
+                <td>{{pet_report.status}}</td>
+                <td>{{pet_report.last_seen_location}}</td>
+                <td class="last-td-dashboard"> <a href="{% url 'update_report' pet_report.id %}"><i class="fas fa-edit"></i></a>
+                    <a href="{% url 'delete_report' pet_report.id %}"><i class="fas fa-trash trash"></i></a>
+                    <a href="{% url 'detail_report'  pet_report.id %}"><i class="fa-solid fa-eye eye"></i></a>
+                </td> 
+            </tr>
+            {%endfor%}
+
+
+        </tbody>
+    </table>
+</div>
+<!-- Edit Modal -->
+<div id="editModal" class="custom-modal">
+    <div class="custom-modal-content">
+        <div class="custom-modal-header">
+            <h2 class="custom-modal-title">Edit Entry</h2>
+            <span class="custom-modal-close">&times;</span>
+        </div>
+        <form id="editForm" class="custom-modal-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+
+    {% endblock content%} 
+    

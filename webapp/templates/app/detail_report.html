@@ -1,0 +1,35 @@
+
+{% extends 'app/base.html' %} 
+{%load static%}
+{% block content%} 
+
+
+<div class="detail-form-container">
+    <h2>Pet Report Details</h2>
+    
+    <div class="detail-card">
+        <div class="detail-card-header">
+            <h3>{{ pet_report.pet_name }}</h3>
+        </div>
+        <div class="detail-card-body">
+            <p><strong>Pet Type:</strong> {{ pet_report.pet_type }}</p>
+            <p><strong>Breed:</strong> {{ pet_report.breed }}</p>
+            <p><strong>Color:</strong> {{ pet_report.color }}</p>
+            <p><strong>Markings:</strong> {{ pet_report.markings }}</p>
+            <p><strong>Status:</strong> {{ pet_report.status }}</p>
+            <p><strong>Last Seen Location:</strong> {{ pet_report.last_seen_location }}</p>
+            <p><strong>Date Reported:</strong> {{ pet_report.date_reported }}</p>
+            {% if pet_report.image %}
+            <div class="detail-pet-image">
+                <img src="{{ pet_report.image.url }}" alt="{{ pet_report.pet_name }}" />
+            </div>
+            {% endif %}
+        </div>
+        <div class="detail-card-footer">
+            <a href="{% url 'update_report' pet_report.id %}" class="detail-btn detail-btn-primary">Update Report</a>
+            <a href="{% url 'delete_report' pet_report.id %}" class="detail-btn detail-btn-danger">Delete Report</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content%} 

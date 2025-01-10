@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %} 
+{%load static%}
+{% block content%} 
+
+<div class="form-container">
+    <h2>Report Missing Pet</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{% endblock content%} 

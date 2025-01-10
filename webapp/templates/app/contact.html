@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %} 
+{%load static%}
+{% block content%} 
+
+<div class="contact-section-custom">
+    <div class="contact-container-custom">
+        <h2 class="contact-header-custom">Have Some Questions?</h2>
+        <div class="contact-content-custom">
+            <!-- Image Section -->
+            <div class="contact-image-container-custom">
+                <img src = "{% static 'images/base2.jpg' %}" class="contact-image-custom">
+            </div>
+            <!-- Form Section -->
+            <div class="contact-form-container-custom">
+                <form action="#" method="post">
+                    <input type="text" class="contact-input-custom" placeholder="First Name" required>
+                    <input type="text" class="contact-input-custom" placeholder="Last Name" required>
+                    <input type="email" class="contact-input-custom" placeholder="What's your email?" required>
+                    <textarea class="contact-textarea-custom" placeholder="Your questions..." required></textarea>
+                    <button type="submit" class="contact-button-custom">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%} 

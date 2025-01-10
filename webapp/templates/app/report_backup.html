@@ -1,0 +1,42 @@
+
+<div class="contact-section-custom">
+    <div class="contact-container-custom">
+        <h2 class="contact-header-custom">Report Missing!</h2>
+        <div class="contact-content-custom">
+            <!-- Image Section -->
+            <div class="contact-image-container-custom">
+                <img src="{% static 'images/base2.jpg' %}" class="contact-image-custom">
+            </div>
+            <!-- Form Section -->
+            <div class="contact-form-container-custom">
+                <h2 class="pet-desc">Describe your Pet</h2>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <!-- Manually render form fields -->
+                    <input type="text" name="customer_name" class="contact-input-custom" placeholder="Full Name" required>
+                    <input type="text" name="pet_name" class="contact-input-custom" placeholder="Pet Name" required>
+                    <input type="email" name="email" class="contact-input-custom" placeholder="What's your email?" required>
+
+                    <select name="pet_type" class="contact-input-custom" required>
+                        <option value="">Select Pet Type</option>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Bird">Bird</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <input type="text" name="breed" class="contact-input-custom" placeholder="Breed (Optional)">
+                    <input type="text" name="color" class="contact-input-custom" placeholder="Color" required>
+                    <textarea name="markings" class="contact-textarea-custom" placeholder="Markings (Optional)"></textarea>
+                    <input type="text" name="last_seen_location" class="contact-input-custom" placeholder="Last Seen Location" required>
+
+                    <label for="image">Pet Image (Optional)</label>
+                    <input type="file" name="image" class="contact-input-custom">
+
+                    <button type="submit" class="contact-button-custom">Report Now!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

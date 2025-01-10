@@ -1,8 +1,22 @@
 
 {%load static%}
 
-<header>
-    <a href = "{% url 'home' %}" > Home </a>
-    <a href = "{% url 'about' %}" > About </a>
-    
-</header>
+        <!-- Navigation Bar -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="{% static 'images/favicon.ico' %}" alt="Logo">
+                    <span>PawTrack</span>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="{% url 'home' %}" >Home</a></li>
+                        <li><a href="{% url 'about' %}" >About</a></li>
+                        <li><a href="{% url 'contact' %}" >Contact</a></li>
+                        <li><a href="{% url 'create_report' %}" >Report</a></li>
+                        <li><a href="{% url 'dashboard' %}" >Dashboard</a></li>
+                        <li><a href="{% url 'login' %}" class="button">Sign In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>

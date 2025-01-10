@@ -1,3 +1,28 @@
+{% extends 'app/base.html' %} 
+{%load static%}
+{% block content%} 
 
-    <h1>about</h1>
+    <!-- About Us Section -->
 
+        <!-- About Us Section -->
+        <section class="about-section-custom">
+            <div class="about-container-custom">
+                <!-- Header -->
+                <h1 class="about-header-custom">About Us</h1>
+                
+                <!-- Image and Description -->
+                <div class="about-content-custom">
+                    <img src = "{% static 'images/pawta.jpg' %}" class="about-image-custom"> 
+                    <div class="about-description-container-custom">
+                        <p class="about-description-custom">
+                            At PawTrackers, we are passionate about bringing lost pets back to their families. Our mission is to create a community where pet owners, animal lovers, and rescuers can come together to make a difference. With user-friendly tools to report lost or found pets, advanced search features, and helpful resources, we aim to simplify the process of reuniting pets with their rightful homes. Every pet has a story, and we’re here to help write the happiest chapters. Together, let’s ensure no pet is left behind.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+
+
+{% endblock content%} 

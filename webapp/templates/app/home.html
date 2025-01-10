@@ -1,9 +1,25 @@
 {% extends 'app/base.html' %} 
 {%load static%}
 {% block content%} 
-    <h1>Home!</h1>
-    <img src = "{% static 'images/base.jpg' %}"> 
 
-    <button onclick="showAlert()">Click me</button>
-    <script src = "{% static 'js/base.js'%}"> </script> 
+
+    
+        <!-- Main Content -->
+        <main>
+            <section class="content-section">
+                <div class="text-content">
+                    <h1>Welcome to PawTrackers!</h1>
+                    <p>Your trusted companion in reuniting lost pets with their loving families. Whether you're searching for a cherished friend or have found an animal in need, our platform is here to connect hearts and homes. Together, we can ensure that every pawprint leads back to where it belongs—because every pet deserves a happy ending.</p>
+                    <div class="buttons">
+                        <button class="primary-btn">Log Now!</button>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src = "{% static 'images/pawta.jpg' %}"> 
+                </div>
+            </section>
+        </main>
+
+
+
     {% endblock content%} 

@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %} 
+{%load static%}
+{% block content%} 
+
+    <div class="custom-login-container">
+        <div class="custom-login-card">
+            <div class="custom-login-form">
+                <h2>Signin</h2><br> <br> 
+                <form>
+                    <input type="text" placeholder="Username" class="custom-input" required><br> <br> 
+                    <input type="password" placeholder="Password" class="custom-input" required><br> <br> 
+                    <button type="submit" class="custom-btn">Signin</button><br> 
+                </form><br> <br> 
+                <p>or signin with</p><br> <br> 
+                <div class="social-login">
+                    <a href="#" class="social-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+            <div class="custom-login-welcome">
+                <h2>Welcome back!</h2>
+                <p>We are so happy to have you here. It's great to see you again. We hope you had a safe and enjoyable time away.</p>
+                <a href="#" class="custom-signup">No account yet? Signup.</a>
+            </div>
+        </div>
+    </div>
+
+    {% endblock content%} 
